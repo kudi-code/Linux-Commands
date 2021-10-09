@@ -43,7 +43,7 @@ o
 ______________________________________________________________________
 Un Poco más a profundidad Git:
 •   git rm --cached archivo.txt : Si le diste add, te lo quita de la versión cambiada en Git, volviendo a la versión anterior
-•   git commit "Cambios" : Declaras la versión de tu archivo
+•   git commit -m "Cambios" : Declaras la versión de tu archivo
 •   git log archivo.txt : Te devuelve los cambios realizados al archivo
 ______________________________________________________________________
 •   git show archivo.txt : te muestra los cambios internos a detalle del archivo 
