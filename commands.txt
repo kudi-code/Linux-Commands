@@ -57,3 +57,7 @@ ______________________________________________________________________
         Notas: Hay que tener cuidado con este comando, ya que TODAS LAS VERSIONES que se realizaron
         después de esta versión se perderán
 •   git log --stat : Te desglosa los cambios por version
+•   git checkout version archivo.txt : Te trae de regreso un archivo de una version anterior
+        Ejemplo: git checkout 8064c408fa616bebf74119783b9d29decd4c35a6 commands.txt
+        No hay de que preocuparse . si quieres volver a la versión master escribir
+        •   git checkout master archivo.txt
