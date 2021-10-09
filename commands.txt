@@ -45,3 +45,15 @@ Un Poco más a profundidad Git:
 •   git rm --cached archivo.txt : Si le diste add, te lo quita de la versión cambiada en Git, volviendo a la versión anterior
 •   git commit "Cambios" : Declaras la versión de tu archivo
 •   git log archivo.txt : Te devuelve los cambios realizados al archivo
+______________________________________________________________________
+•   git show archivo.txt : te muestra los cambios internos a detalle del archivo 
+        \ No newline at end of file 
+        (END) (presionar Q)
+•   git log archivo.txt y git diff : Hace la diferencia entre versiones de 2 archivos en el tiempo
+        Ejemplo: git diff f2d613f46a0ba05f2f4e79b740d94da37f 438f9bd8fbb6cc0b3f420c153b7606f8837736f4
+        Compara la versión 0 con la 1.0.2
+•   git reset version --hard : Cambia TODO a la versión anterior
+        Ejemplo: git reset f2d613f46a0ba05f2f4e79b740d94da37f --hard
+        Notas: Hay que tener cuidado con este comando, ya que TODAS LAS VERSIONES que se realizaron
+        después de esta versión se perderán
+
