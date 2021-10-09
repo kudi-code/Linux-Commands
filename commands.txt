@@ -19,20 +19,29 @@
 •	rm -d Carpeta : Borra una carpeta
 •	rm archivo.exe : Borra un archivo
 •	ls -al : Te muestra todos los archivos (también ocultos) y con sus permisos
+•   history : Te da el historial de todos tus comandos
+•   !72 : Número de comando. Repite el comando descubierto con history
+
 ______________________________________________________________________
 Conectar el GitHub
 echo "NombreDelProyecto" >> README.md
-git init
-git add README.md
-git add archivos.txt : Todos los archivos que necesitas en el proyecto
+•   git init
+•   git add README.md
+•   git add archivos.txt : Todos los archivos que necesitas en el proyecto
 o
-git add -all : Rellena todos los archivos en la carpeta
+•   git add -all : Rellena todos los archivos en la carpeta
 (antes del siguiente si no lo has hecho:) 
-•	git config --global user.name "kudi-code"
-•	git config --global user.email kievinsal.casas@gmail.com
-•	git –edit –global (nadamás para revisar si todo está correcto)
-git commit -m "first commit"
-git branch -M master
-git remote add origin https://github.com/kudi-code/holi.git
-git push -u origin main
-•	Tu correo y TOKEN DE GITHUB, NO TU CONTRASEÑA
+    •	git config --global user.name "kudi-code"
+    •	git config --global user.email kievinsal.casas@gmail.com
+    •	git –edit –global (nadamás para revisar si todo está correcto)
+•   git commit -m "first commit"
+•   git branch -M main : Main es el el branch principal de GitHub
+•   git remote add origin https://github.com/kudi-code/holi.git
+•   git push -u origin main
+    •	Tu correo y TOKEN DE GITHUB, NO TU CONTRASEÑA
+•   git status : Te muestra el estado de tu proyecto git
+______________________________________________________________________
+Un Poco más a profundidad Git:
+•   git rm --cached archivo.txt : Si le diste add, te lo quita de la versión cambiada en Git, volviendo a la versión anterior
+•   git commit "Cambios" : Declaras la versión de tu archivo
+•   git log archivo.txt : Te devuelve los cambios realizados al archivo
