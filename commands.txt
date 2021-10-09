@@ -1,0 +1,38 @@
+•	Cd .. : Te lleva al directorio padre
+•	Pwd : Te dice el directorio donde estás
+•	Cd / : Directorio Root
+•	Ls : archivos
+•	cd /mnt/c : directorio C de la PC
+•	cd ~ : Te lleva a Home
+•	sudo mkdir NombreDeCarpeta: Crear carpeta
+•	touch nombredelarchivo.txt : Crear un archivo
+•	mv nombredelarchivo.txt NombreDeCarpeta : Mueve archivos a carpetas
+•	code . : Te abre VSCode (Instalar Remote – WSL)
+•	(si no se tiene instalado la compatibilidad con VSCode se instala primero y después repetir comando)
+•	explorer.exe . : Abre explorer en la carpeta de Ubuntu
+•	cat index.html : Nos muestra el contenido en texto plano de un archivo
+•	man cat : Te da un manual de los comandos. Funciona con todos
+•	sudo apt-get update: Busca actualizaciones
+•	sudo apt-get upgrade: Las instala
+•	sudo apt install nombredelpaquete : Instala paquetes nuevos
+•	clear : Limpia la pantalla
+•	rm -d Carpeta : Borra una carpeta
+•	rm archivo.exe : Borra un archivo
+•	ls -al : Te muestra todos los archivos (también ocultos) y con sus permisos
+______________________________________________________________________
+Conectar el GitHub
+echo "NombreDelProyecto" >> README.md
+git init
+git add README.md
+git add archivos.txt : Todos los archivos que necesitas en el proyecto
+o
+git add -all : Rellena todos los archivos en la carpeta
+(antes del siguiente si no lo has hecho:) 
+•	git config --global user.name "kudi-code"
+•	git config --global user.email kievinsal.casas@gmail.com
+•	git –edit –global (nadamás para revisar si todo está correcto)
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/kudi-code/holi.git
+git push -u origin main
+•	Tu correo y TOKEN DE GITHUB, NO TU CONTRASEÑA
