@@ -56,4 +56,4 @@ ______________________________________________________________________
         Ejemplo: git reset f2d613f46a0ba05f2f4e79b740d94da37f --hard
         Notas: Hay que tener cuidado con este comando, ya que TODAS LAS VERSIONES que se realizaron
         después de esta versión se perderán
-
+•   git log --stat : Te desglosa los cambios por version
