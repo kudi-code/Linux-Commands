@@ -61,3 +61,25 @@ ______________________________________________________________________
         Ejemplo: git checkout 8064c408fa616bebf74119783b9d29decd4c35a6 commands.txt
         No hay de que preocuparse . si quieres volver a la versión master escribir
         •   git checkout master archivo.txt
+        Corroborado: No pasa nada
+•   git rm --cached: Elimina los archivos de nuestro repositorio local y del área de staging,
+    pero los mantiene en nuestro disco duro. Básicamente le dice a Git que deje de trackear el 
+    historial de cambios de estos archivos, por lo que pasaran a un estado untracked.
+•   git rm --force: Elimina los archivos de Git y del disco duro. Git siempre guarda todo,
+    por lo que podemos acceder al registro de la existencia de los archivos, de modo que podremos
+    recuperarlos si es necesario (pero debemos usar comandos más avanzados).
+•   !important :
+    •   git reset: Este comando nos ayuda a volver en el tiempo. Pero no como git checkout que nos 
+        deja ir, mirar, pasear y volver. Con git reset volvemos al pasado sin la posibilidad de volver 
+        al futuro. Borramos la historia y la debemos sobreescribir. No hay vuelta atrás.
+        •   git reset --soft: Borramos todo el historial y los registros de Git pero guardamos los cambios
+            que tengamos en Staging, así podemos aplicar las últimas actualizaciones a un nuevo commit.
+        •   git reset --hard: Borra todo. Todo todito, absolutamente todo. Toda la información de los commits
+            y del área de staging se borra del historial.
+        •   git reset HEAD: Este es el comando para sacar archivos del área de staging. No para borrarlos
+            ni nada de eso, solo para que los últimos cambios de estos archivos no se envíen al último commit, 
+            a menos que cambiemos de opinión y los incluyamos de nuevo en staging con git add, por supuesto.
+    •   Caso hipotético: Tienes una carpeta de una página, pero el .css aún no está listo
+        •   Si ya añadiste este archivo con git add . Lo que debes hacer es sacarlo del add . , es decir:
+            git rm --cached archivo.css
+            así, una vez terminado de editarse ese archivo se añade de nuevo con git add archivo.css
