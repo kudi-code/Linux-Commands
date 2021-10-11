@@ -21,7 +21,11 @@
 •	ls -al : Te muestra todos los archivos (también ocultos) y con sus permisos
 •   history : Te da el historial de todos tus comandos
 •   !72 : Número de comando. Repite el comando descubierto con history
-
+______________________________________________________________________
+Lo que harás siempre al guardar cambios:
+•   git commit -am "mensaje"
+•   git log o git status
+•   git push -u origin main para mandarlo a GitHub
 ______________________________________________________________________
 Conectar el GitHub
 echo "NombreDelProyecto" >> README.md
@@ -35,6 +39,8 @@ o
     •	git config --global user.email kievinsal.casas@gmail.com
     •	git –edit –global (nadamás para revisar si todo está correcto)
 •   git commit -m "first commit"
+o
+•   git commit -am "Mensaje" : Te hace un add y un commit a la vez
 •   git branch -M main : Main es el el branch principal de GitHub
 •   git remote add origin https://github.com/kudi-code/holi.git
 •   git push -u origin main
@@ -83,3 +89,49 @@ ______________________________________________________________________
         •   Si ya añadiste este archivo con git add . Lo que debes hacer es sacarlo del add . , es decir:
             git rm --cached archivo.css
             así, una vez terminado de editarse ese archivo se añade de nuevo con git add archivo.css
+______________________________________________________________________
+•   git commit -am "mensaje": Hace add sólo a los archivos previamente añadidos con add
+    •   git commit -a : Abre el editor de texto
+        •   esc+i : Insertar texto
+        •   esc+shift+z+z o ctrl+s: guardar
+        •   ctrl+x :  Salir
+Creando la branch
+•   git status
+•   git branch NombredelaRama : Crea la rama
+•   git checkout NombredelaRama : Te mueves de rama
+Añadimos los archivos a la branch
+•   git add Archivos.txt
+•   git commit -m "Mensaje"
+Listo. Para cambiar de branch, nos movemos de branch: git checkout NombredelaRama
+______________________________________________________________________
+•   git branch : te dice en que rama estás y cuales son las ramas existentes
+Para Hacer un merge
+•   git checkout master
+•   git branch : Para corroborar
+•   git merge branch -m "Mensaje"
+    •   Ejemplo: git merge header -m "Fusion"
+______________________________________________________________________
+Resolver conflictos de Merge: Revisar el Word
+______________________________________________________________________
+Traerse un proyecto de GitHub nuevo y sobreescribirlo con el nuestro
+•   git remote add origin https://tuproyecto.com
+•   git remote -v : Corroboramos que es correcto
+•   git pull origin master
+•   git push origin rama : Le hasces push a la rama
+    •   git push origin master
+•   git pull origin master --allow-unrelated-histories : Forzas a reescribir las ramas
+•   git pull origin master
+______________________________________________________________________
+Configurar llave SSH
+•   git config -l : Revisa tus config
+•   ssh-keygen -t rsa -b 4096 -C "youremail@example.com"
+    ssh-agent bash
+•   eval "$(ssh-agent)"
+•   ssh-add ~/.ssh/id_rsa
+Una vez listo copiamos la llave pública (/home/user/.ssh/id_rsa.pub) y le pegamos en GitHub en
+el menú settings/ssh
+Cambiando la repo a una SSH
+•   git remote set-url origin github.com/...
+    •   NOTA IMPORTANTE: Para gestionar varias repo´s basta con camiar origin por el nombre deseado
+        es decir, si queremos la repo "juanito" ponemos: git remote set-url juanito juanito.com/...
+•   git pull : nadamás para confirmar el pull
