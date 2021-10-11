@@ -21,6 +21,7 @@
 •	ls -al : Te muestra todos los archivos (también ocultos) y con sus permisos
 •   history : Te da el historial de todos tus comandos
 •   !72 : Número de comando. Repite el comando descubierto con history
+•   alias timeline="git log --all --graph --decorate --oneline" : creas con cualquier otro comando un "shortcut"
 ______________________________________________________________________
 Lo que harás siempre al guardar cambios:
 •   git commit -am "mensaje"
@@ -135,3 +136,27 @@ Cambiando la repo a una SSH
     •   NOTA IMPORTANTE: Para gestionar varias repo´s basta con camiar origin por el nombre deseado
         es decir, si queremos la repo "juanito" ponemos: git remote set-url juanito juanito.com/...
 •   git pull : nadamás para confirmar el pull
+______________________________________________________________________
+Tags 
+•   git log --all --graph --decorate --oneline : Te enseña todos los cambios realizados gráficamente
+•   git tag -a NombreDelTag -m "Mensaje" hash
+    •   Ejemplo: git tag -a Version-1 -m "Primera Version del código" 9dc4e00
+•   git pull origin master : jalas lo que hay en internet antes de subir lo que sea
+•   git push origin --tags : subes sólamente las tags
+
+Borrar tag
+•   git tag
+•   git tag -d NombreDelTag
+______________________________________________________________________
+branch
+•   git show-branch --all : Muestra un histórico por ramas
+•   gitk : Te muestra todo gráfico 
+    Si estamos en WSL2 instalar primero https://sourceforge.net/projects/vcxsrv/files/latest/download
+    instalamos sin cliente y marcamos "disable access control"
+    el programa debe estar abierto
+    Luego aplicamos los siguentes comandos
+    •   export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
+    •   export DISPLAY="`sed -n 's/nameserver //p' /etc/resolv.conf`:0"
+    •   export DISPLAY=$(ip route|awk '/^default/{print $3}'):0.0
+    •   echo $DISPLAY : para revisar que esté correcto
+    Y al final colocar gitk ESTANDO DENTRO DE LA CARPETA DEL PROYECTO GIT
