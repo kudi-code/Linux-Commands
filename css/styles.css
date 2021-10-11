@@ -1,5 +1,18 @@
-h1
+body{
+    color: gray;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+#container
 {
-    text-align: center;
-    font-family: 'Arial';
+    width: 70%;
+    padding: 1em;
+    text-align: left;
+    border: 1px solid black;
+    margin: 1px auto;
+}
+#container h1{
+    font-size: 40px;
+
 }
