@@ -160,3 +160,6 @@ branch
     •   export DISPLAY=$(ip route|awk '/^default/{print $3}'):0.0
     •   echo $DISPLAY : para revisar que esté correcto
     Y al final colocar gitk ESTANDO DENTRO DE LA CARPETA DEL PROYECTO GIT
+______________________________________________________________________
+Clonar un repo:
+•   git clone https://Tusitio.com
