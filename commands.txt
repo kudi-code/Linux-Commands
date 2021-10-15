@@ -181,4 +181,10 @@ Git cherry-pick
     •   Ejemplo: git cherry-pick f2d613f46a0ba05f2f4e79b740d94da37f
 ______________________________________________________________________
 Amend
-git commit --ammend : "Remienda" un commit incompleto
+•   git commit --amend : "Remienda" un commit incompleto
+______________________________________________________________________
+Reflog
+•   git reflog : Ves todos los cambios a detalle (un log avanzado)
+•   git reset -- HARD hash : Vas a una versión anterior (ES PELIGROSO. BORRA EL FUTURO , aunque con reflog aún se ve)
+    Este comando se debe usar SOLO EN CASO DE EMERGENCIA
+    Ejemplo: git reset --hard HEAD@{1}   ó   git reset 6e623f2
