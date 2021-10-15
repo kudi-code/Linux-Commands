@@ -170,3 +170,15 @@ Git Stash (útil para "guardar" parcialmente un avance y regresar 1)
 •   git stash branch NombredelaRama : Guarda en una rama los cambios previamente "guardados" en stash
 •   git stash drop : útil acompañado primero de un git stash para regresar a una versión anterior
     y desechar el stash realizado 
+______________________________________________________________________
+Git Clean (limpia archivos no deseados)
+•   git clean --dry-run : Te dice que va a borrar
+•   git clean -f : borra los archivos "de más"
+•   git clean -df : Borra archivos y carpetas "de más"
+______________________________________________________________________
+Git cherry-pick
+•   git cherry-pick commit : Estando en la branch receptora se pide un commit de otra rama
+    •   Ejemplo: git cherry-pick f2d613f46a0ba05f2f4e79b740d94da37f
+______________________________________________________________________
+Amend
+git commit --ammend : "Remienda" un commit incompleto
