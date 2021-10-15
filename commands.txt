@@ -163,3 +163,10 @@ branch
 ______________________________________________________________________
 Clonar un repo:
 •   git clone https://Tusitio.com
+______________________________________________________________________
+Git Stash (útil para "guardar" parcialmente un avance y regresar 1)
+•   git stash : te regresa 1 y "guarda" en stash tus cambios
+•   git stash list : Lista de stash
+•   git stash branch NombredelaRama : Guarda en una rama los cambios previamente "guardados" en stash
+•   git stash drop : útil acompañado primero de un git stash para regresar a una versión anterior
+    y desechar el stash realizado 
